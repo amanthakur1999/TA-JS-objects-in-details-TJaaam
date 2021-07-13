@@ -46,11 +46,11 @@ function createUser(name , age){
    user.name = name ;
    user.age = age;
    return user
-// }
+}
 let personOne = createUser("aman",21)
 let personTwo = createUser ("Amanthakur", 22)
 
-pesudoClassical 
+//pesudoClassical 
 
 function CreateUser(name , age){
     
@@ -72,15 +72,15 @@ let personTwo = new CreateUser ("Amanthakur", 22)
 // personTwo.sayHello();
 
 //class
-// class user {
-//     constructor(name , age) {
-//     this.name = name ;
-//     this.age = age;
-//     }
-//     sayHello:function (){
-//         alert(`Welcome ${this.name}`)
-//     }
-//  }
+class user {
+    constructor(name , age) {
+    this.name = name ;
+    this.age = age;
+    }
+    sayHello(){
+        alert(`Welcome ${this.name}`)
+    }
+ }
   
 let personOne = createUser("aman",21)
 let personTwo = createUser ("Amanthakur", 22)
