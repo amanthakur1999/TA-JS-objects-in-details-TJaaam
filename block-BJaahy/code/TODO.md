@@ -72,13 +72,40 @@ class square {
    get area(){
         return this.width * this.height
     }
-    set area(){
-         return this.width * this.height
+    set area(value){
+        let side = Math.sqrt(value);
+        this.width = side;
+        this.heigth = side;
     }
 }
 ```
 
 - Create a static method named `isEqual` which accepts two `square` object with `width` and `height` property. If the area of both square is same it will return `true` or `false`.
+```js
+class square {
+    constructor (side){
+        this.side = side;
+    }
+    description(){
+        alert(`The square is ${width} x ${height}`)
+    }
+    calcArea(){
+        return this.width * this.height
+    }
+   get area(){
+        return this.width * this.height
+    }
+    set area(value){
+        let side = Math.sqrt(value);
+        this.width = side;
+        this.heigth = side;
+    }
+    static isEqual(a,b){
+        return (a.width * a.height)===(b.width * b.height)
+    }
+}
+```
+
 
 - Create another property named `numberOfTimes` that will hold the value of number of times the area property is accessed from the object. The values will initialize to `0`. The area property can't be accessed more than 4 times. If it crosses 4 times alert message `Upper Limit Reached`
 
