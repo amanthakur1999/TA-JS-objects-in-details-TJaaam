@@ -1,4 +1,4 @@
-let aboutAnimal ={
+CreateAnimal.prototype ={
     eat : function(){
         console.log(`I live in ${this.location} and I can eat`);
     },
@@ -10,12 +10,12 @@ let aboutAnimal ={
 console.log(`I live in ${this.location} and I have ${this.numberOfLegs}`);
     }
 }
-function animal(location , numberOfLegs){
+function CreateAnimal(location , numberOfLegs){
 
-let animals = Object.create(aboutAnimal)
-animals.location = location;
-animals.numberOfLegs = numberOfLegs
-return animals
+
+this.location = location;
+this.numberOfLegs = numberOfLegs
+
 }
 
 //class
@@ -39,7 +39,7 @@ console.log(`I live in ${this.location} and I have ${this.numberOfLegs}`);
 
 //
 
-let dogsMethod ={
+CreateDog.prototype ={
     bark: function(){
      alert(`I am ${this.name} and I can bark 🐶`)
     },
@@ -56,21 +56,23 @@ let dogsMethod ={
     }
 }
 Object.setPrototypeOf(dogsMethod,aboutAnimal)
-function dog(location, numberOfLegs,name , color){
+function CreateDog(location, numberOfLegs,name , color){
 
-    let obj = aboutAnimal(location,numberOfLegs);
+    CreateAnimal.call(this,location,numberOfLegs)
     Object.setPrototypeOf(obj,dogsMethod)
-    obj.name = name;
-    obj.color = color;
-    return obj;
+this.name = name;
+this.color = color;
+    
     }
 
 
     // class 
-    class dogsMethod {
-        constraction(name,color){
+    class Dog {
+        constraction(location,numberOfLegs,name,color){
+           
             this.name = name;
             this.color = color
+            
         }
         bark(){
             alert(`I am ${this.name} and I can bark 🐶`)
@@ -87,4 +89,3 @@ function dog(location, numberOfLegs,name , color){
                return `I am ${this.name} and I am of ${this.color} color. I can also bark`
            }
     }
-    
