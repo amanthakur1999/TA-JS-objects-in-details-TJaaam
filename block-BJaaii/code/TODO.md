@@ -12,7 +12,40 @@ Queue
 
 Data:
 
-- `stack`
+```js
+class Stack {
+    constraction  (){
+        this.stack =[];
+    }
+    push(value){
+this.stack.push(value);
+return this.stack
+    }
+    pop(){
+        this.stack.pop()
+        return this.stack;
+    }
+    peek(index = this.stack.length -1){
+          this.stack.lastIndex(index);
+          return this.stack[index]
+      
+    }
+    reverse(){
+        this.stack.reverse();
+        return this.reverse;
+    }
+    isEmpty(){
+        return !(this.stack.length >0)
+    }
+    displayStack(){
+        this.stack.join("");
+        return this.stack;
+    }
+    get length (){
+        return this.stack.length;
+    }
+}
+```
 
 Methods:
 
@@ -67,6 +100,34 @@ Getter
 #### Test
 
 ```js
+class Queue {
+  constructor() {
+    this.queue = [];
+  }
+  enqueue(value) {
+    this.queue.push(value);
+    return this.queue;
+  }
+  dequeue() {
+    this.queue.shift();
+    return this.queue;
+  }
+  peek(index = this.queue.length - 1) {
+    return this.queue[index];
+  }
+  isEmpty() {
+    return !(this.queue.length > 0);
+  }
+  displayQueue(value) {
+    this.queue.join(value);
+    return this.queue;
+  }
+  get length() {
+    return this.queue.length;
+  }
+}
+
+
 let atmQueue = new Queue();
 atmQueue.enqueue('Aman');
 atmQueue.enqueue('John');
