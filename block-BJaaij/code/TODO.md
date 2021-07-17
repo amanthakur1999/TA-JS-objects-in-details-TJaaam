@@ -67,6 +67,7 @@ return this.books;
         this.currentIndexBook =this.currentIndexBook -1;
         return this.book[this.currentIndexBook];
     }
+    let book2 = new Booklist("You Can Win","Rich Dad and Poor Dad")
 
 }
 ```
