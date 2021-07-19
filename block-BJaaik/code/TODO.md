@@ -28,7 +28,7 @@ return `walking good for your health `
 }
 
 class Player extends Person{
-    constractor (name, age, gender, sportName){
+    constructor (name, age, gender, sportName){
 super(name,age,gender);
 this.sportName = sportName;
     }
@@ -38,7 +38,7 @@ this.sportName = sportName;
 }
 
 class Teacher extends Person {
-    constactor (name,age,gender,instituteName){
+    constructor (name,age,gender,instituteName){
         super(name,age,gender);
         this.instituteName = instituteName;
     }
@@ -49,7 +49,7 @@ teach(){
 }
 
 class Artist extends Person {
-    constactor (name,age,gender,kind){
+    constructor (name,age,gender,kind){
         super(name,age,gender);
         this.kind = kind;
     }
