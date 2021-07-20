@@ -5,47 +5,52 @@ let formTitle = form.elements.title;
 let formAuthor = form.elements.author;
 let formImg = form.elements.img;
 
-
 class Book {
-    constructor (title,author,img){
-this.title = title;
-this.author = author;
-this.img = img;
-this.isRead = false;
-this.id = `id - ${Date.now()}`;
-    }
-    toggleIsRead(){
-        this.isRead = !this.isRead;
-    }
-    deleteTodo() {
-        let index = this.books.findIndex((book) => book.id === id);
-        this.books.splice(index, 1);
-        this.createUI();
-      }
+  constructor(title, author, img) {
+    this.title = title;
+    this.author = author;
+    this.img = img;
+    this.isRead = false;
+    this.id = `id - ${Date.now()}`;
+  }
+
+  toggleIsRead() {
+    this.isRead = !this.isRead;
+  }
+
+  deleteTodo() {
+    let index = this.books.findIndex((book) => book.id === id);
+    this.books.splice(index, 1);
+    this.createUI();
+  }
 }
 
-class Booklist{
-constructor (books =[]){
-    this.books =books;
-}
-addBook(title,author,img){
-    let book = new Book(title,author, img);
+class BookList {
+  constructor(books = []) {
+    this.books = books;
+  }
+
+  addBook(title, author, img) {
+    let book = new Book(title, author, img);
     this.books.push(book);
     this.createUI();
-}
-createUI(){
-    ul.innerHTML="";
-    this.books.forEach((book)=>{
-        let li = document.createElement("li");
-        li.classList.add("card");
-        let cross = document.createElement("p");
-        cross.innerText = "❌" ;
-         cross.addEventListener("click" ,()=>{
-             book.deleteTodo();
-             this.createElement();
-         });
+  }
 
-         let img = document.createElement("img");
+  createUI() {
+    ul.innerHTML = "";
+    this.books.forEach((book) => {
+      let li = document.createElement("li");
+      li.classList.add("card");
+
+      let cross = document.createElement("p");
+      cross.innerText = "❌";
+      cross.classList.add("cross");
+      cross.addEventListener("click", () => {
+        book.deleteTodo();
+        this.createElement();
+      });
+
+      let img = document.createElement("img");
       img.src = book.img;
       img.classList.add("image");
 
@@ -72,21 +77,22 @@ createUI(){
       li.append(cross, img, title, author, button);
       ul.append(li);
     });
-}
+  }
 }
 
-let library = new Booklist();
+let library = new BookList();
 
-function handleSubmit(event){
-    let title = formTitle.value;
+function handleSubmit(event) {
+  event.preventDefault();
+  let title = formTitle.value;
   let author = formAuthor.value;
   let img = formImg.value;
 
   library.addBook(title, author, img);
 
-  title.value = "";
-  author.value = "";
-  img.value = "";
+  formTitle.value = "";
+  formAuthor.value = "";
+  formImg.value = "";
 }
 
 form.addEventListener("submit", handleSubmit);
