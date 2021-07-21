@@ -1,0 +1,134 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    line-height: 1.5;
+    font-size: 3rem;
+    color: azure;
+    background: #0f2027; 
+    background: -webkit-linear-gradient(
+      to right,
+      #1f98ad,
+      #27a0c8,
+      #c9dde6
+    ); 
+    background: linear-gradient(
+      to right,
+      #9dcbdf,
+      #0d7699,
+      #6fbee0
+    ); 
+    font-family: 'Open Sans', sans-serif;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  .flex-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+  }
+  article {
+    max-width: 800px;
+    width: 100%;
+    
+  }
+  .heading {
+    background-color: rgb(92, 206, 121);
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    border: 1px solid grey;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    animation: unorder 1s linear;
+    transition: all 0.5s ease-in-out;
+  }
+  ul {
+    max-width: 800px;
+    width: 100%;
+    
+  }
+  @keyframes unorder {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  li {
+    width: 100%;
+    animation: unorder 1s linear;
+    transition: all 0.5s ease-in-out;
+   
+  }
+  p {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  h2 {
+    color: wheat;
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+  }
