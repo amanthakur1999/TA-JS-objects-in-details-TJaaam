@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./stylesheet/style.css">
     <title>Quiz App</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./stylesheet/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Quiz App</h1>
-            <div class="flex">
-                <h2>correct Answer <span class="totalCorrect">0</span></h2>
-                <h2>Total no of Question <span class="totalQ"></span></h2>
-            </div>
-        </div>
+  </head>
+  <body>
+    <header class="heading flex-box">
+      <strong>QUIZ APP</strong>
+      <p>Correct Answers: <span class="totalCorrect">0</span></p>
+      <p>Total No of Questions : <span class="totalQ"></span></p>
     </header>
-    <main>
-        <section class="container ">
-            <ul class="Quiz"></ul>
-            <div class="flex">
-            <button class="prevBtn">Previous</button>
-            <button class="nextBtn">Next</button>
-        </div>
-        </section>
-    </main>
+
+    <section class="container flex">
+      <article>
+        <ul class="quiz"></ul>
+        <button class="prevBtn">PREVIOUS</button>
+        <button class="nextBtn">NEXT</button>
+      </article>
+    </section>
     <script src="./index.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+  </body>
 </html>
